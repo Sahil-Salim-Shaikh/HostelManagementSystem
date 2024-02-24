@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hostel Management System - Available Beds</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        h3 {
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 8px 12px;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h2>Welcome to Hostel Management System</h2>
+    
+    <!-- Include a welcome message or user information if needed -->
+    
+    <h3>Available Beds</h3>
+    
+    <!-- Include any success or error messages if needed -->
+    
+    <ul>
+        <li th:each="bed : ${beds}">
+            <div>
+                <span>Bed Number: <strong th:text="${bed.bedNumber}"></strong></span>
+            </div>
+            <div>
+                <form th:action="@{/beds/book/{bedId}(bedId=${bed.id})}" method="post">
+                    <button type="submit">Book</button>
+                </form>
+            </div>
+        </li>
+    </ul>
+</body>
+</html>
