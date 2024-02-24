@@ -17,11 +17,6 @@
 
 
 
-### Get Books
-<img src="https://github.com/Sahil-Salim-Shaikh/E_LIBRARY/blob/master/Project_img/get%20book.png?raw=true">
-
-
-------------------------------------------
 
 ### Book bed
 <img src="https://github.com/Sahil-Salim-Shaikh/ecommerce/blob/main/screenshots/bedpage.png">   
